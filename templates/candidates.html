@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <h2>Bienvenue page candidate</h2>
+  <table>
+    <thead>
+      <tr>
+         <th>ID</th>
+         <th>PRENOM</th>
+         <th>NOM</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for candidate in candidates %}
+        <tr>
+           <td>{{ candidate.id }}</td>
+           <td>{{ candidate.first_name }}</td>
+           <td>{{ candidate.last_name }}</td>
+        </tr>
+      {% endfor %}
+  </tbody>
+  </table>
+{% endblock %}
